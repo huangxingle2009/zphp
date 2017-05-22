@@ -22,9 +22,6 @@ class Swoole
 
     public static function start($sessionType, $config)
     {
-        if (null !== self::$_sid) {
-            return;
-        }
         //判断参数里是否有sessid
         if (empty($config)) {
             $config = ZConfig::get('session');
